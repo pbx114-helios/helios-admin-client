@@ -37,13 +37,14 @@ textarea {
     font-size: 3vh;
     resize: none;
     width: 30vw;
-    height: 5vh;
-    padding-top: 1vh;
+    padding-top: 1.3vh;
+    padding-bottom: 1.3vh;
     padding-left: 1vw;
     background-color: #464646;
     color: #C0C0C0;
     border-radius: 9px;
     border: 1px solid #C0C0C0;
+    vertical-align: middle;
 }
 
 #username {

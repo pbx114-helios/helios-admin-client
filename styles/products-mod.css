@@ -146,3 +146,14 @@ span {
 .delete:hover {
     background-color: #d34747;
 }
+
+.add-size {
+    background-color: #FD7D00;
+    padding: 1.4vh 0.7vw;
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+.add-size:hover {
+    cursor: pointer;
+}

@@ -67,7 +67,7 @@ h2 {
     background-color: #de6f00;
 }
 
-textarea {
+input[type="text"] {
     margin-top: 1vh;
     margin-bottom: 1vh;
     background-color: #464646;

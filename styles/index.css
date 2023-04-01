@@ -33,10 +33,11 @@ h1 {
     top: 25vh;
 }
 
-textarea {
+input {
     font-size: 3vh;
     resize: none;
     width: 30vw;
+    height: 1.2rem;
     padding-top: 1.3vh;
     padding-bottom: 1.3vh;
     padding-left: 1vw;

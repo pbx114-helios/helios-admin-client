@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add New Product</title>
+        <link rel="stylesheet" href="./styles/products-mod.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="./scripts/check.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Product</title>
-    <link rel="stylesheet" href="./styles/products-mod.css">
-    <script src="./scripts/check.js"></script>
-</head>
-
-<body onload="check()">
-    <form id="newprod">
+    <body onload="check()">
         <div class="navbar">
             <div class="nav-element"><a href="#">Main Page</a></div>
             <div class="nav-element"><a href="#">Store</a></div>
@@ -23,24 +22,47 @@
                 <div class="add-size">Add size</div>
             </div>
             <div class="input-container">
-                <textarea name="c-name" id="c-name" rows="1" placeholder="Product name"
-                    class="long-textarea"></textarea>
-                <textarea name="c-desc" id="c-desc" rows="1" placeholder="Product description"
-                    class="long-textarea"></textarea>
-                <textarea name="c-img" id="c-img" rows="1" placeholder="Product image link"
-                    class="long-textarea"></textarea>
+                <input
+                    name="c-name"
+                    type = "text"
+                    id="c-name"
+                    rows="1"
+                    placeholder="Product name"
+                    class="long-textarea"
+                ></input>
+                <input
+                type = "text"
+                    name="c-desc"
+                    id="c-desc"
+                    placeholder="Product description"
+                    class="long-textarea"
+                ></input>
+                <input
+                type="text"
+                    name="c-img"
+                    id="c-img"
+                    placeholder="Product image link"
+                    class="long-textarea"
+                ></input>
                 <span>
-                    <textarea name="c-price" id="c-price" rows="1" placeholder="AED 1050 - Change price"
-                        class="short-textarea"></textarea>
-                    <button class="change" onclick="submitData()">ADD</button>
+                    <input
+                    type = "text"
+                        name="c-price"
+                        id="c-price"
+                        placeholder="AED 1050 - Change price"
+                        class="short-textarea"
+                    ></input>
+                    <button class="change">ADD</button>
                 </span>
             </div>
+            <div class="product-image">
+                <img
+                    src="./src/product-image.png"
+                    alt="Product Image"
+                    class="img"
+                />
+            </div>
         </div>
-        <div class="product-image">
-            <img src="./src/product-image.png" alt="Product Image" class="img">
-        </div>
-    </form>
-    <script src="./scripts/addprod.js"></script>
-</body>
-
+        <script src="./scripts/addprod.js"></script>
+    </body>
 </html>

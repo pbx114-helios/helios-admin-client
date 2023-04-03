@@ -73,16 +73,17 @@ input[type="text"] {
     background-color: #464646;
     padding: 2vh 2vw;
     font-size: 2.3vh;
+    border: none;
     border-radius: 5px;
     resize: none;
     color: #C0C0C0;
 }
 
-.long-textarea {
+.long-input {
     width: 40vw;
 }
 
-.short-textarea {
+.short-input {
     width: 26vw;
 }
 

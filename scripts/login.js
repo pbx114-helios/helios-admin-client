@@ -8,17 +8,19 @@ function submit() {
         body: JSON.stringify(form_data),
         headers: {
             "Content-Type": "application/json",
-            "SameSite" : "None"
+            "SameSite": "None"
         },
     })
         .then((res) => {
             return Promise.all([res.json(), res.status]);
         })
         .then(([response, stat]) => {
-            alert(response.msg)
             if (stat == "200") {
                 sessionStorage.setItem("token", response.token)
                 window.location.href = "/home.html"
+            }
+            else {
+                alert(response.msg)
             }
         });
 }

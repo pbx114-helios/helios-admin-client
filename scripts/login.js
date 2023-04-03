@@ -12,14 +12,13 @@ function submit() {
         },
     })
         .then((res) => {
-            if (res.status == "200") {
-                return res.json();
-            }else{
-                alert("it shouldve worked");
-            }
+            return Promise.all([res.json(), res.status]);
         })
-        .then((response) => {
-            alert("logged in");
-            sessionStorage.setItem("token", response.token)
+        .then(([response, stat]) => {
+            alert(response.msg)
+            if (stat == "200") {
+                sessionStorage.setItem("token", response.token)
+                window.location.href = "/home.html"
+            }
         });
 }

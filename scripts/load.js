@@ -13,6 +13,13 @@ function display() {
         div = document.createElement("div");
         div.id = `product${i}`;
         div.classList.add("existing-products");
+        (function (i) {
+            div.addEventListener("click", function () {
+                localStorage.clickedElement = i;
+                window.location.href = './product.html'
+            });
+        })(i)
+
         div.innerHTML = `<img src="./src/merch-sample.png" alt="sample" class="prod-img"><div class="prod-name">${data[i]['name']}</div>`
         document.getElementById('container').appendChild(div)
     }

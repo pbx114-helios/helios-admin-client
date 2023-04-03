@@ -10,7 +10,7 @@
     <script src="./scripts/check.js"></script>
 </head>
 
-<body onload="check()">
+<body onload="check();">
     <div class="navbar">
         <div class="nav-element"><a href="#">Main Page</a></div>
         <div class="nav-element"><a href="#">Store</a></div>
@@ -36,6 +36,22 @@
         <img src="./src/product-image.png" alt="Product Image" class="img">
         <button class="delete">DELETE</button>
     </div>
+    <script>
+        const api_url = "http://localhost:3000/products";
+        let data
+        getData();
+        async function getData() {
+            const response = await fetch(api_url);
+            temp = await response.json();
+            data = temp['products']
+            loadElement();
+        }
+        function loadElement() {
+            document.getElementById("c-name").value = data[Number(localStorage.clickedElement)]['name']
+            document.getElementById("c-desc").value = data[Number(localStorage.clickedElement)]['description']
+            document.getElementById("c-price").value = data[Number(localStorage.clickedElement)]['price']
+        }
+    </script>
 </body>
 
 </html>

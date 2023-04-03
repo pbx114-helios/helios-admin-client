@@ -17,7 +17,7 @@ function submit() {
         .then(([response, stat]) => {
             if (stat == "200") {
                 sessionStorage.setItem("token", response.token)
-                window.location.href = "/home.html"
+                window.location.href = "./home.html"
             }
             else {
                 alert(response.msg)
